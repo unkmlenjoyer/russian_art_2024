@@ -6,7 +6,8 @@ import numpy as np
 import torch
 from torchvision import transforms
 
-from src.utils import ArtDataset, init_model
+from src.initial_model_utils import init_model
+from src.train_utils import ArtDataset
 
 MODEL_WEIGHTS = "./data/weights/resnet50_tl_68.pt"
 TEST_DATASET = "./data/test/"

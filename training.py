@@ -8,23 +8,17 @@
 import os
 import shutil
 
-
 import numpy as np
 import pandas as pd
 import torch
-
-
 from sklearn.model_selection import train_test_split
 from sklearn.utils.class_weight import compute_class_weight
 from torch import nn
 from torch.utils.data import WeightedRandomSampler
 from torchvision import transforms
-from src.utils import (
-    set_seed,
-    ArtDataset,
-    init_model,
-    train_model,
-)
+
+from src.initial_model_utils import init_model, set_seed
+from src.train_utils import ArtDataset, train_model
 
 """
 1.2 Define constants
