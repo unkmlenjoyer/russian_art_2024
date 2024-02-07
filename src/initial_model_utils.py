@@ -35,7 +35,9 @@ def set_requires_grad(model: nn.Module, value: bool = False) -> None:
         param.requires_grad = value
 
 
-def init_model(device: torch.device, num_classes: int) -> nn.Module:
+def init_model(
+    device: torch.device, num_classes: int, pretrained: bool = False
+) -> nn.Module:
     """Function to initialize classifier by using backbone of pretrained ResNet50
 
     Parameters
@@ -44,6 +46,8 @@ def init_model(device: torch.device, num_classes: int) -> nn.Module:
         User's device (cpu or gpu)
     num_classes : int
         Number of classed to classify
+    pretrained : bool
+        Download pretrained model
 
     Returns
     -------
@@ -51,7 +55,7 @@ def init_model(device: torch.device, num_classes: int) -> nn.Module:
         New model
     """
 
-    weights = torchvision.models.ResNet50_Weights.IMAGENET1K_V2
+    weights = torchvision.models.ResNet50_Weights.IMAGENET1K_V2 if pretrained else None
     model = torchvision.models.resnet50(weights=weights)
 
     # freeze all weight's gradients
