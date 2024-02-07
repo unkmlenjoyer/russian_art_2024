@@ -34,6 +34,19 @@
 Для работы использовался Python 3.10.0, необходимые библиотеки есть в `requirements.txt`
 
 
+### 4. Использование
+-----
+
+Убедитесь, что у Вас установлен Docker на локальной машине. В случае отсутствия, перейдите
+[сюда](https://docs.docker.com/get-docker/) и проследуйте по инструкции.
+
+После перейдите в командую строку и выполните следующие команды:
+
+<code>docker compose up --build</code>
+
+Далее на [странице документации](http://0.0.0.0:8050/docs), будет доступна ручка
+`\predict` для классификации картинок, можно загружать и смотреть!
+
 # EN
 
 ### 1. Intro
@@ -65,3 +78,15 @@ The target metric is F1 (macro). Leaderboard is 0.68 (baseline 0.58)
 -----
 
 We used Python 3.10.0, all dependencies are in `requirements.txt` file.
+
+### 4. Usage
+-----
+
+Be sure that Docker is installed on your local machine. If not, go [there](https://docs.docker.com/get-docker/)
+and do following instructions.
+
+Then go to command line and execute commands:
+
+<code>docker compose up --build</code>
+
+Next, an endpoint `\predict` for classifying images will be available on the [documentation page](http://0.0.0.0:8050/docs), you can try to load image and watch prediction results!
