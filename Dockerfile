@@ -2,8 +2,8 @@ FROM python:3.10-slim
 WORKDIR /app
 
 COPY ./requirements.txt ./requirements.txt
-
 RUN pip install -r requirements.txt
+RUN pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
 
 COPY ./api/main.py ./main.py
 COPY ./api/config.py ./config.py

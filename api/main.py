@@ -12,7 +12,7 @@ from initial_model_utils import init_model
 
 config = ArtClassifierConstants()
 
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+device = torch.device("cpu")
 
 model = init_model(device, num_classes=len(config.id2label), pretrained=False)
 model.load_state_dict(torch.load(config.model_weights_path, map_location=device))

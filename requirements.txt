@@ -1,5 +1,3 @@
-torch
-torchvision
 numpy
 fastapi
 python-multipart
