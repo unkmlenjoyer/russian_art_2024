@@ -1,4 +1,8 @@
 FROM python:3.10-slim
+
+ARG PIP_DISABLE_PIP_VERSION_CHECK=1
+ARG PIP_NO_CACHE_DIR=1
+
 WORKDIR /app
 
 COPY ./requirements.txt ./requirements.txt
